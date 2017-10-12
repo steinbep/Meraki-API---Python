@@ -18,7 +18,7 @@ organizationid = 'xxxxxxxxx'
 answer = input('Do you have the MAC address? (y or n): ')
 
 #IF Statement to start looping through for MAC lookup.
-if answer == ('yes') or answer == ('y'):
+if answer == ('yes') or answer == ('Yes') or answer == ('YES') or answer == ('Y') or answer == ('y') :
 
     #User input of MAC Address
     mac = input('MAC: ')
