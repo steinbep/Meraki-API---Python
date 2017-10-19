@@ -21,7 +21,7 @@ print('Enter a file name below,\nthe .csv will be appended to the name given')
 filename = input('Name: ')
 
 #User input of MAC Address
-mac = input('Input partial MAC: ')
+mac = input('Input first 3 octets of the MAC: ')
 
 #Network lookup
 networks = meraki.getnetworklist(apikey, organizationid, suppressprint=True)
