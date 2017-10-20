@@ -37,3 +37,5 @@ for row in networks:
                         
             if psk == oldpsk:
                 updatepsk = meraki.updatessid(apikey, row['id'], line['number'], line['name'] , enabled = 'true', authmode = 'psk', encryptionmode = 'wpa',psk = newpsk, suppressprint=True)
+                print ('Completed Change for ' + (str(row['name'])))
+                
