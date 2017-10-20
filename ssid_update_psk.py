@@ -12,6 +12,8 @@ apikey = 'xxxxxx'
 
 # Enter Organization ID Here
 organizationid = 'xxxxxxxxx'
+
+#User Inputs for SSID and  new/old PSK
 netname = input('INPUT SSID: ')
 oldpsk = input('OLD PSK YOU ARE CHANGING: ')
 newpsk = input('NEW PSK: ')
