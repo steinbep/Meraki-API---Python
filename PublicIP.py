@@ -5,9 +5,8 @@ import json
 import csv
 
 #
-# Python Script Using Meraki API to Inventory devices by vendor MAC (First 3 octets)
+# Python Script Using Meraki API to pull public IP addresses for each field site
 # Writes the data to CSV
-# Network Name, Device Name, and IP Address
 #
 
 # Enter User's API Key
