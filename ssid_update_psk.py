@@ -34,10 +34,11 @@ for row in networks:
         continue
         
     for line in data:
-        if netname in line['name']:
-            psk = line['psk']
-                        
-            if psk == oldpsk:
-                updatepsk = meraki.updatessid(apikey, row['id'], line['number'], line['name'] , enabled = 'true', authmode = 'psk', encryptionmode = 'wpa',psk = newpsk, suppressprint=True)
-                print ('Completed Change for ' + (str(row['name'])))
-                
+        try:
+            if netname in line['name']:
+                if line['psk'] == oldpsk:
+                    updatepsk = meraki.updatessid(apikey, row['id'], line['number'], line['name'] , enabled = 'true', authmode = 'psk', encryptionmode = 'wpa',psk = newpsk, suppressprint=True)
+                    print ('Completed Change for ' + (str(row['name'])))
+        except:
+            print(row['name'])
+            pass
